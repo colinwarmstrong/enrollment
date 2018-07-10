@@ -8,4 +8,8 @@ describe Address, type: :model do
     it{should validate_presence_of :state}
     it{should validate_presence_of :zip_code}
   end
+
+  describe 'relationships' do
+    it{should belong_to :student}
+  end
 end
