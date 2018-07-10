@@ -19,6 +19,6 @@ describe "user visits '/students/:id/addresses/new'" do
     expect(page).to have_content('123 Main St')
     expect(page).to have_content('Minooka')
     expect(page).to have_content('IL')
-    expect(page).to have_content('60447')    
+    expect(page).to have_content(60447)    
   end
 end

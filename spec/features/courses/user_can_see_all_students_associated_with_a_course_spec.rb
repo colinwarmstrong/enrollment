@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe "user visits '/courses/:id'" do
-  it 'sees a list of all students associated with that course' do
+  it 'sees a list of all the students associated with that course' do
     course = Course.create(title: 'Math')
     student_1 = course.students.create(name: 'Colin')
     student_2 = course.students.create(name: 'Jill')
