@@ -6,7 +6,7 @@ describe "user visits '/students/:id/edit'" do
 
     visit edit_student_path(student)
 
-    fill_in 'student[name]', with: 'Jill'
+    fill_in :student_name, with: 'Jill'
 
     click_on 'Submit'
 
