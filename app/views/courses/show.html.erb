@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Course</title>
+  </head>
+  <body>
+    <h1><%= @course.title %></h1>
+    <% @course.students.each do |student| %>
+      <p><%= student.name %></p>
+    <% end %>
+  </body>
+</html>
