@@ -13,5 +13,8 @@
       <p><%= address.state %></p>
       <p><%= address.zip_code %></p>
     <% end %>
+    <% @student.courses.each do |course| %>
+      <%= course.title %>
+    <% end %>
   </body>
 </html>
