@@ -10,7 +10,8 @@ describe "user visits '/students/:id/edit'" do
 
     click_on 'Submit'
 
-    expect(current_path).to eq(student_path(1))
+    expect(current_path).to eq(student_path(student))
     expect(page).to have_content('Jill')
+    expect(page).to_not have_content('Colin')
   end
 end
