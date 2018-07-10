@@ -9,6 +9,6 @@ describe "user visits '/students'" do
     click_on 'Delete'
 
     expect(current_path).to eq(students_path)
-    expect(page).to_not have_content('Jill')
+    expect(page).to_not have_content('Colin')
   end
 end
