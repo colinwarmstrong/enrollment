@@ -6,5 +6,12 @@
   </head>
   <body>
     <h1><%= @student.name %></h1>
+    <% @student.addresses.each do |address| %>
+      <p><%= address.description %></p>
+      <p><%= address.street_address %></p>
+      <p><%= address.city %></p>
+      <p><%= address.state %></p>
+      <p><%= address.zip_code %></p>
+    <% end %>
   </body>
 </html>
