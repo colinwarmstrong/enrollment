@@ -6,11 +6,12 @@ describe "user visits '/students/:id/edit'" do
 
     visit edit_student_path(student)
 
-    fill_in 'student[name]', with: 'Jill'
+    fill_in :student_name, with: 'Jill'
 
     click_on 'Submit'
 
-    expect(current_path).to eq(student_path(1))
+    expect(current_path).to eq(student_path(student))
     expect(page).to have_content('Jill')
+    expect(page).to_not have_content('Colin')
   end
 end

@@ -8,4 +8,12 @@ describe "user visits any page" do
 
     expect(current_path).to eq(students_path)
   end
+
+  it "clicking 'Create New Student' in the navbar takes user to the create new student page" do
+    visit students_path
+
+    click_on 'Create New Student'
+
+    expect(current_path).to eq(new_student_path)
+  end
 end

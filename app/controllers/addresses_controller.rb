@@ -1,13 +1,12 @@
 class AddressesController < ApplicationController
+  before_action :set_student, only: [:new, :create]
 
   def new
-    @student = Student.find(params[:student_id])
     @address = Address.new
   end
 
   def create
-    student = Student.find(params[:student_id])
-    address = student.addresses.create!(address_params)
+    address = @student.addresses.create(address_params)
     redirect_to student_path(address.student)
   end
 
@@ -15,5 +14,9 @@ class AddressesController < ApplicationController
 
   def address_params
     params.require(:address).permit(:description, :street_address, :city, :state, :zip_code)
+  end
+
+  def set_student
+    @student = Student.find(params[:student_id])
   end
 end
