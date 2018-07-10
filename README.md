@@ -1,4 +1,4 @@
 # Rails Timed Challenge
-##by Colin Armstrong
+## by Colin Armstrong
 
 All user stories are tested, all tests are green.
